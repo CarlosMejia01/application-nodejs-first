@@ -14,6 +14,9 @@ app.set("view engine", "ejs");
 //Routes
 app.use(indexRoutes);
 
+//Use static css file
+app.use(express.static(join(__dirname, "public")));
+
 //Listening port
 app.listen(3000);
 console.log("Server is listening on port", 3000);
